@@ -1,5 +1,6 @@
 // Stan code for RL-DDM model
 // written by Jihyun Hur
+// model = hba_two_both (model 3)
 
 data {
   int<lower=1> N;                    // subject

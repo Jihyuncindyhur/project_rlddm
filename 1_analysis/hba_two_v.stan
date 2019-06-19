@@ -1,5 +1,6 @@
-// stan code for two drift rates
-// one population
+// Stan code for RL-DDM model
+// written by Jihyun Hur
+// model = hba_two_v (model 2)
 
 data {
   int<lower=1> N;                    // subject

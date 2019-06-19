@@ -1,8 +1,9 @@
 ## subject = 30
 ## iter = 2000, warmup = 1000, chains = 4
-## total steps = 50
-## one population distribution
+## total steps = 50 (step size = 0.04)
 ## two drift rates, one starting point by condition
+## hierarchical bayesian analysis (one population distribution)
+
 
 library(rstan)
 library(dplyr)
