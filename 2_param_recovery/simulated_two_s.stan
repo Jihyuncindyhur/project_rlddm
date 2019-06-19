@@ -1,4 +1,5 @@
 // Stan code for RL-DDM model
+// model: hba_two_s
 // written by Jihyun Hur
 
 data {
