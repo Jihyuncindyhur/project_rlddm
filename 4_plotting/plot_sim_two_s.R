@@ -1,16 +1,13 @@
 ## plotting parameter recovery results
+## model: hba_two_s
 
 load("~/project_hur/sim_two_s_6sub_100_2.RData")
 load("~/project_hur/true_param_two_s.RData")
+
 library(ggplot2)
 library(rstan)
 
-#true_1
-#mu_tau      mu_b0      mu_b1      mu_w1      mu_w2   mu_alpha   mu_omega 
-#0.09188545 0.52032282 1.83394511 0.39453991 0.34799191 0.18735706 1.73202208 
-
 colnames(true_param) <- c('tau_true', 'b0_true', 'b1_true', 'w1_true', 'w2_true', 'alpha_true', 'omega_true')
-
 
 tau_df   <- data.frame(summary(sim_two_s_6sub_100_2)$summary[8:13, ])
 b0_df    <- data.frame(summary(sim_two_s_6sub_100_2)$summary[14:19, ])
@@ -28,7 +25,6 @@ rownames(w2_df) <- c('1', '2', '3', '4', '5', '6')
 rownames(alpha_df) <- c('1', '2', '3', '4', '5', '6')
 rownames(omega_df) <- c('1', '2', '3', '4', '5', '6')
 
-b0_df
 data_tau <- cbind(tau_df, tau_true = true_param[, 1])
 data_b0 <- cbind(b0_df, b0_true = true_param[, 2])
 data_b1 <- cbind(b1_df, b1_true = true_param[, 3])
@@ -39,14 +35,14 @@ data_om <- cbind(omega_df, omega_true = true_param[, 7])
 data_tau
 
 plot_tau <- ggplot(data_tau, aes(x=tau_true, y=mean)) + 
-            geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.005) +
-            geom_point(color = 'blue') +
-            coord_cartesian(xlim =c(0, 0.15), ylim = c(0, 0.15)) +
-            geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
-            labs(y = 'estimated mean values', x = 'tau true parameter values') +
-            stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
-            ggtitle('tau')
-plot_tau
+             geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.005) +
+             geom_point(color = 'blue') +
+             coord_cartesian(xlim =c(0, 0.15), ylim = c(0, 0.15)) +
+             geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
+             labs(y = 'estimated mean values', x = 'tau true parameter values') +
+             stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
+             ggtitle('tau')
+
 plot_b0 <- ggplot(data_b0, aes(x=b0_true, y=mean)) + 
             geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.035) +
             geom_point(color = 'blue') +
@@ -55,7 +51,6 @@ plot_b0 <- ggplot(data_b0, aes(x=b0_true, y=mean)) +
             labs(y = 'estimated mean values', x = 'b0 true parameter values') +
             stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
             ggtitle('b0')
-plot_b0
 
 plot_b1 <- ggplot(data_b1, aes(x=b1_true, y=mean)) + 
             geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.05) +
@@ -65,7 +60,6 @@ plot_b1 <- ggplot(data_b1, aes(x=b1_true, y=mean)) +
             labs(y = 'estimated mean values', x = 'b1 true parameter values') +
             stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
             ggtitle('b1')
-plot_b1
 
 plot_w1 <- ggplot(data_w1, aes(x=w1_true, y=mean)) + 
             geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.01) +
@@ -75,7 +69,6 @@ plot_w1 <- ggplot(data_w1, aes(x=w1_true, y=mean)) +
             labs(y = 'estimated mean values', x = 'w1 true parameter values') +
             stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
             ggtitle('w1')
-plot_w1
 
 plot_w2 <- ggplot(data_w2, aes(x=w2_true, y=mean)) + 
             geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=.01) +
@@ -85,24 +78,21 @@ plot_w2 <- ggplot(data_w2, aes(x=w2_true, y=mean)) +
             labs(y = 'estimated mean values', x = 'w2 true parameter values') +
             stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
             ggtitle('w2')
-plot_w2
 
 plot_alpha <- ggplot(data_al, aes(x=alpha_true, y=mean)) + 
-                geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=0.025) +
-                geom_point(color = 'blue') +
-                coord_cartesian(xlim =c(0, 0.5), ylim = c(0, 0.5)) +
-                geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
-                labs(y = 'estimated mean values', x = 'alpha true parameter values') +
-                stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
-                ggtitle('alpha')
-plot_alpha
+               geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=0.025) +
+               geom_point(color = 'blue') +
+               coord_cartesian(xlim =c(0, 0.5), ylim = c(0, 0.5)) +
+               geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
+               labs(y = 'estimated mean values', x = 'alpha true parameter values') +
+               stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
+               ggtitle('alpha')
 
 plot_omega <- ggplot(data_om, aes(x=omega_true, y=mean)) + 
-                geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=0.03) +
-                geom_point(color = 'blue') +
-                coord_cartesian(xlim =c(1.2, 1.9), ylim = c(1.2, 1.9)) +
-                geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
-                labs(y = 'estimated mean values', x = 'omega true parameter values') +
-                stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
-                ggtitle('omega')
-plot_omega
+               geom_errorbar(aes(ymin=X2.5., ymax=X97.5.), width=0.03) +
+               geom_point(color = 'blue') +
+               coord_cartesian(xlim =c(1.2, 1.9), ylim = c(1.2, 1.9)) +
+               geom_abline(intercept = 0, slope = 1, color = 'darkblue') +
+               labs(y = 'estimated mean values', x = 'omega true parameter values') +
+               stat_smooth(method = "lm", se = FALSE, col = "darkblue", linetype = 'dotted') +
+               ggtitle('omega')
