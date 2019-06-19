@@ -5,6 +5,7 @@
 ## total steps =            50 (step size = 0.04) ##
 ## model =                  hba_two_v             ##
 ####################################################
+
 rm=(list=ls())
 
 setwd('/home/hur_jihyun/project_hur')
@@ -14,10 +15,11 @@ set.seed(seed)
 library(GMCM)
 library(RWiener)
 library(rstan)
+
 load('true_two_v.RData')
 
 # initialize
-N = 12                           # number of subjects
+N = 12 # number of subjects
 C = 40
 conds <- c(rep('go_escape', C), rep('nogo_escape', C),
            rep('go_avoid', C),  rep('nogo_avoid', C))
@@ -32,7 +34,6 @@ for (i in 1:length(params)) {
   true_param_two_v[, i] <- rnorm(N, true_mean_two_v[i], true_sd_two_v[i])
 }
 
-true_param_two_v
 save(true_param_two_v, file = 'true_param_two_v.RData')
 
 # create an empty dataset
@@ -50,7 +51,7 @@ for (i in 1:N) {
   alpha <- true_param_two_v$alpha[i]
   omega <- true_param_two_v$omega[i]
   
-  Q = data.frame(matrix(0, nrow=4, ncol=2))                             # inital state-action values
+  Q = data.frame(matrix(0, nrow=4, ncol=2)) # inital state-action values
   
   # calculate the probability of go per trial, by condition
   for (t in 1:total_trials) {
@@ -184,7 +185,6 @@ for (i in 1:N) {
 }
 colnames(all_data) <- c('subn', 'condn', 'escape', 'choice', 'rt', 'fdbk')
 as.data.frame(all_data)
-all_data
 
 write.csv(all_data, file = "simulated_two_v_12sub.csv", row.names = F)
 
