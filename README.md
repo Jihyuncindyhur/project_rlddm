@@ -12,7 +12,7 @@ This repository includes R scripts and stan codes for 2019 Spring Computational 
 [5_data](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/4_plotting): a list of datasets
 
 ### Data Reference
-Millner A. J., den Ouden H. E. M., Gershman S. J., Glenn C. R., Kearns J. C., Bornstein A. M., Marx B. P., Keane T. M., Nock M. K. (2019). Suicidal thoughts and behaviors are associated with an increased decision-making bias for active responses to escape aversive states. *Journal of Abnormal Psychology,* 128(2):106-118 
+
 Millner, A. J., den Ouden, H. E., Gershman, S. J., Glenn, C. R., Kearns, J. C., Bornstein, A. M., Marx, B. P., Keane, T. M., Nock, M. K. (2019). Suicidal thoughts and behaviors are associated with an increased decision-making bias for active responses to escape aversive states. Journal of Abnormal Psychology, 128(2):106-118.
 
 
