@@ -1,10 +1,7 @@
-####################################################
-############### Simulating Data ####################
-####################################################
-## number of subjects =     12                    ##
-## total steps =            50 (step size = 0.04) ##
-## model =                  hba_two_both          ##
-####################################################
+# subjects = 12                 
+# total steps = 50 (step size = 0.04)
+# model = hba_two_both 
+# simulating data
 
 rm=(list=ls())
 
