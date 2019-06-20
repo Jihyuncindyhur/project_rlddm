@@ -1,4 +1,4 @@
-## subject = 12
+## subjects = 12
 ## total steps = 50 (step size = 0.04)
 ## one population, two drift rates
 ## parameter recovery

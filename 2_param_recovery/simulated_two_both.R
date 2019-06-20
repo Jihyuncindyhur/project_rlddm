@@ -1,4 +1,4 @@
-## subject = 6
+## subjects = 6
 ## total steps = 50 (step size = 0.04)
 ## one population, two starting points, two drift rates
 ## parameter recovery

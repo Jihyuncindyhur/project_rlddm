@@ -1,4 +1,4 @@
-## subject = 6
+## subjects = 6
 ## total steps = 100 (step size = 0.02)
 ## one population, two starting points
 ## parameter recovery

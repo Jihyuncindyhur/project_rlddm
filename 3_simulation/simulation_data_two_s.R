@@ -1,7 +1,7 @@
-# number of subjects = 6                     
-# total steps = 100 (step size = 0.02)
-# model = hba_two_s             
-# simulating data
+## subjects = 6                     
+## total steps = 100 (step size = 0.02)
+## model = hba_two_s             
+## simulating data
 
 rm=(list=ls())
 

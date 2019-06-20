@@ -1,5 +1,5 @@
 ## plotting parameter recovery results
-## model: hba_two_s
+## model = hba_two_s
 
 load("~/project_hur/sim_two_s_6sub_100_2.RData")
 load("~/project_hur/true_param_two_s.RData")
