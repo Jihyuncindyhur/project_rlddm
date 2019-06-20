@@ -18,4 +18,5 @@ Millner, A. J., den Ouden, H. E., Gershman, S. J., Glenn, C. R., Kearns, J. C., 
 
 ### Plans
 1. Model comparison with the whole 129 subjects
-2. RLDDM for a task with two alternative choices (e.g. probabilistic selection task) 
+2. Parameter recoveries with multiple combinations of true parameters
+3. RLDDM for a task with two alternative choices (e.g. probabilistic selection task) 
