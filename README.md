@@ -1,6 +1,6 @@
 # project_rlddm
 
-## Implementation of Reinforcement Learning Drift Diffusion Model in rStan with Go/No-go task data
+## Implementation of Reinforcement Learning Drift Diffusion Model in R Stan with Go/No-go task data
 
 This repository includes R scripts and stan codes for 2019 Spring Computational Modeling final project. <br>
 
