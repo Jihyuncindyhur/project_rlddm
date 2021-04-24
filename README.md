@@ -12,8 +12,8 @@ This repository includes R scripts and stan codes for my 2019 Spring Computation
 [5_data](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/4_plotting): a list of datasets
 
 ### Files
-rlddm_allsubj: hierarchical Bayesian analysis results with the entire subject data
-rlddm_final_hur: pdf slides for the final presentation
+- rlddm_allsubj: hierarchical Bayesian analysis results with the entire subject data
+- rlddm_final_hur: pdf slides for the final presentation
 
 ### Data Reference
 
