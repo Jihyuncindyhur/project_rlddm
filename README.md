@@ -2,14 +2,18 @@
 
 ## Implementation of Reinforcement Learning Drift Diffusion Model in R Stan with Go/No-Go Task Data
 
-This repository includes R scripts and stan codes for 2019 Spring Computational Modeling final project. <br>
+This repository includes R scripts and stan codes for my 2019 Spring Computational Modeling final project. <br>
 
 ### Directories
-[1_analysis](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/1_analysis): hierarchical bayesian analysis of RLDDM <br>
+[1_analysis](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/1_analysis): hierarchical Bayesian analysis of RLDDM <br>
 [2_param_recovery](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/2_param_recovery): parameter recovery of three suggested models <br>
 [3_simulation](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/3_simulation): generating fake datasets with true parameters <br>
 [4_plotting](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/4_plotting): plotting parameter recovery results <br>
 [5_data](https://github.com/Jihyuncindyhur/project_rlddm/tree/master/4_plotting): a list of datasets
+
+### Files
+rlddm_allsubj: hierarchical Bayesian analysis results with the entire subject data
+rlddm_final_hur: pdf slides for the final presentation
 
 ### Data Reference
 
